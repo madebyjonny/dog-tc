@@ -1,0 +1,31 @@
+---
+import './home-about.css';
+---
+
+<article class="home-about-section">
+    <section>
+        <div>
+            <span>
+                CrossFit Death or Glory. It's just a name. But what it stands for is something much much more. We provide a vehicle for change. We provide an escape from the norm. A community of like minded individuals who don’t settle for anything less than all in.
+            </span>
+        </div>
+    </section>
+</article>
+
+
+<script>
+    import { scroll } from 'motion';
+    const text = document.querySelector('.home-about-section span') as HTMLDivElement;
+
+
+    scroll(
+      (progress: number) => {
+        console.log(progress);
+        const backgroundSize = `${progress * 100}% 100%`;
+        text.style.backgroundSize = backgroundSize;
+      },
+      {
+        target: text, 
+        offset: ["end", "start"]
+    });
+</script> 
