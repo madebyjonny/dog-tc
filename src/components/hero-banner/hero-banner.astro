@@ -1,17 +1,35 @@
 ---
 import "./hero-banner.css";
+import { Image } from 'astro:assets';
+import Image1 from "../../assets/image-1.webp";
+import Image2 from "../../assets/image-2.webp";
+import Image3 from "../../assets/image-3.webp";
+import Image4 from "../../assets/image-4.webp";
+import Image5 from "../../assets/image-5.webp";
+import Image6 from "../../assets/image-6.webp";
 ---
 
 <article class="hero-banner">
     <header>
-        <h1>A vehicle for change</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quisquam facere reprehenderit, modi quae earum aut iusto deserunt, expedita et corrupti ab! Id soluta corporis iure magni, temporibus doloribus exercitationem?</p>
+        <h1>Raise<br/> the Standard</h1>
+        <p>Ready to push your limits? Join Death or Glory Training Club—a community 
+            of driven individuals who've got your back every step of the way. 
+            Rise to the challenge and unlock your potential today. </p>
+
+        <a href="#about" class="btn" data-variant="outlined">Expore</a>
     </header>
     <div class="gallery-columns">
-        <div><img src="" /></div>
-        <div class="double-images"><img src="" /><img src="" /></div>
-        <div class="centered-image"><img src="" /></div>
-        <div class="double-images"><img src="" /><img src="" /></div>
-        <div><img src="" /></div>
+        <div><Image src={Image1} alt="athelete on concept ski-erg"/></div>
+        <div class="double-images">
+            <Image src={Image2} alt="athletes running as part of a team workout"/>
+            <Image src={Image3} alt="athlete at a crossfit competition performing double unders surrounded by supports from the gym"/></div>
+        <div class="centered-image">
+            <video src="/middle-vid.mp4" autoplay muted loop/>
+        </div>
+        <div class="double-images">
+            <Image src={Image4} alt="athlete looking tired on rower post workout"/>
+            <Image src={Image5}  alt="athelete looking cheerful after workout"/>
+        </div>
+        <div><Image src={Image6}  alt="athelete performing a split jerk"/></div>
     </div>
 </article>

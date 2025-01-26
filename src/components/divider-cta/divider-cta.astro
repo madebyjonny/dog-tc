@@ -1,0 +1,15 @@
+---
+import "./divider-cta.css";
+import { Image } from 'astro:assets';
+import BannerImage from "../../assets/divider-banner.webp";
+---
+
+
+<article class="divider-cta">
+    <Image src={BannerImage} alt="" aria-hidden />
+    <section>
+        <h2>Ready to get started?</h2>
+        <p>Join our community today and start your journey to a healthier lifestyle.</p>
+        <a href="/join" class="btn">Join now</a>
+    </section>
+</article>

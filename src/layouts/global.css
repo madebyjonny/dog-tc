@@ -1,12 +1,13 @@
 :root {
-  --slate-900: #1a1a1a;
+  --slate-500: #999;
+  --slate-900: #0d0d0d;
 
   --amber-200: #dfdbd8;
 
   --background: var(--slate-900);
   --text: var(--amber-200);
 
-  --border-radius-outer: 0.5rem;
+  --border-radius-outer: 30px;
 }
 
 @layer reset {
@@ -26,14 +27,21 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px;
+  }
+
   body {
+    font-family: "Inter", serif;
+    letter-spacing: 0.04rem;
+    line-height: 1.6;
     background-color: var(--background);
     color: var(--text);
-    font-family: sans-serif;
     min-height: 100vh;
-    line-height: 1.6;
     overflow-x: hidden;
-    scroll-padding-top: 100px;
+    padding: 0;
+    margin: 0;
   }
 
   a {
@@ -48,6 +56,10 @@
     }
   }
 
+  p {
+    font-weight: 300;
+  }
+
   img {
     border-radius: var(--border-radius-outer);
   }
@@ -56,5 +68,53 @@
     list-style: none;
     margin: 0;
     padding: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.5rem;
+    letter-spacing: 0.08rem;
+    color: #fff;
+    line-height: 100%;
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  h2 {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  .btn {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    max-width: fit-content;
+    min-height: 36px;
+    padding-inline: 1rem;
+    border-radius: 100px;
+    background: #fff;
+    color: var(--slate-900);
+
+    &[data-variant="outlined"] {
+      transition: color 0.3s, border 0.3s;
+      background: transparent;
+      border: 1px solid var(--slate-500);
+      color: var(--slate-500);
+
+      &:hover,
+      &:focus-visible {
+        color: #fff;
+        border: 1px solid #fff;
+        opacity: 1;
+      }
+    }
   }
 }

@@ -1,0 +1,13 @@
+---
+import "./link-content-card.css";
+const { title, description, href, imageURL } = Astro.props;
+---
+
+<a href={href} class="content-card">
+    <img src={imageURL} alt="" aria-hidden />
+    <section>
+        <h3>{title}</h3>
+        <p>{description}</p>
+    </section>
+</a>
+

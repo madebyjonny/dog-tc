@@ -1,0 +1,15 @@
+---
+import "./testimonial-card.css";
+const { quote, name } = Astro.props;
+---
+
+<section class="testimonial-card">
+    <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Format Quote</title><path fill-rule="evenodd" d="M8.37 16.26c-.22.45-.69.74-1.2.74-1 0-1.65-1.05-1.2-1.94L7 13H5c-.55 0-1-.45-1-1V8c0-.55.45-1 1-1h4c.55 0 1 .45 1 1v4.53c0 .31-.07.61-.21.89l-1.42 2.84Zm10 0c-.22.45-.69.74-1.2.74-1 0-1.65-1.05-1.2-1.94L17 13h-2c-.55 0-1-.45-1-1V8c0-.55.45-1 1-1h4c.55 0 1 .45 1 1v4.53c0 .31-.07.61-.21.89l-1.42 2.84Z"></path><metadata>doc, edit, editing, editor, format, quotation, quote, sheet, spreadsheet, text, type, writing</metadata></svg></span>
+    <blockquote>
+        <p>{quote}</p>
+    </blockquote>
+    <cite>
+        <p>{name}</p>
+    </cite>
+</section>
+

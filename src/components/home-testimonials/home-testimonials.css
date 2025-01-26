@@ -1,0 +1,67 @@
+.testimonials {
+  position: relative;
+  padding-block: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+
+  h2 {
+    font-weight: 300;
+  }
+
+  header {
+    padding-inline: 10%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &:after {
+    position: absolute;
+    top: 0;
+    left: -2rem;
+    height: 100%;
+    width: 30%;
+    background: linear-gradient(90deg, var(--background) 30%, rgba(0, 0, 0, 0));
+    z-index: 1;
+    content: "";
+  }
+
+  &:before {
+    position: absolute;
+    top: 0;
+    right: -2rem;
+    height: 100%;
+    width: 30%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0), var(--background) 70%);
+    z-index: 1;
+    content: "";
+  }
+}
+
+.testimonial-list {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  white-space: nowrap;
+  animation: scroll 45s linear infinite;
+  &:hover {
+    animation-play-state: paused;
+  }
+
+  > * {
+    flex: 1;
+    min-width: 25%;
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

@@ -10,6 +10,15 @@
   box-sizing: border-box;
   backdrop-filter: blur(7px);
   z-index: 99;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.04rem;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  a:not(.btn) {
+    color: #fff;
+  }
 
   > * {
     flex: 1;
@@ -23,6 +32,7 @@
   }
 
   .cta {
-    text-align: right;
+    display: flex;
+    justify-content: flex-end;
   }
 }

@@ -1,0 +1,50 @@
+---
+import "./home-testimonials.css";
+import TestimonialCard from '../testimonial-card/testimonial-card.astro'
+
+const testimonials = [
+    {
+        name: '',
+        quote: 'Awesome community and brilliant programming by the coaches, joined up two months ago and loving it 😁'
+    },
+    {
+        name: '',
+        quote: 'Amazing place to massively improve your fitness and become part of a friendly and close knit group.'
+    },
+    {
+        name: '',
+        quote: 'Great gym and great team. I have been going here for over 6 month now and have had nothing but support and advice. It has a pleasant and friendly atmosphere would recommend to all 😊'
+    },
+    {
+        name: '',
+        quote: 'Excellent programming and has best prices in Newcastle for CrossFit. The community feel is spot on, would really recommend! You can do a free taster session first too if you aren\'t too sure if you will like it and you aren\'t contracted in at all like most gyms do!'
+    }
+]
+---
+
+
+<article class="testimonials">
+    <header>
+        <h2>What people say</h2>
+        <p>Reviews from our community</p>
+    </header>
+    <ul role="list" class="testimonial-list">
+        {testimonials.map((testimonial) => (
+            <li>
+                <TestimonialCard 
+                    quote={testimonial.quote} 
+                    name={testimonial.name} 
+                />
+            </li>
+        ))}
+
+        {testimonials.map((testimonial) => (
+            <li>
+                <TestimonialCard 
+                    quote={testimonial.quote} 
+                    name={testimonial.name} 
+                />
+            </li>
+        ))}
+    </ul>
+</article>
