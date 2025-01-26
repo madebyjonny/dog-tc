@@ -11,7 +11,7 @@
   }
 
   header {
-    padding-inline: 10%;
+    padding-inline: 5%;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -46,14 +46,15 @@
   display: flex;
   gap: 1rem;
   white-space: nowrap;
-  animation: scroll 45s linear infinite;
+  animation: scroll 35s linear infinite;
   &:hover {
     animation-play-state: paused;
   }
 
   > * {
     flex: 1;
-    min-width: 25%;
+    min-width: 400px;
+    width: 55%;
   }
 }
 

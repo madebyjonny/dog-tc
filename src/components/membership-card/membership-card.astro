@@ -1,0 +1,30 @@
+---
+import "./membership-card.css";
+const { title, price, url, description, isPopular } = Astro.props as {
+  title: string;
+  description: string;
+  price: string;
+  url: string;
+  isPopular: boolean;
+  variant: "secondary" | "primary" | "tertiary";
+};
+---
+
+<a class="membership-card" href={url}>
+  <header class="membership-card__header">
+    <div class="membership-card__headline">
+      <h2>{title}</h2>
+      {isPopular && <span class="pill">Popular</span>}
+    </div>
+    <p class="membership-card__description">
+      {description}
+    </p>
+  </header>
+
+  <footer class="membership-card__footer">
+    <div>
+      {price}<span class="membership-card__duration">/per month</span>
+    </div>
+    <span class="btn">Get Started</span>
+  </footer>
+</a>

@@ -1,0 +1,101 @@
+---
+import ColumnContainer from "../components/column-container/column-container.astro";
+import ContentColumns from "../components/content-columns/content-columns.astro";
+import MembershipCard from "../components/membership-card/membership-card.astro";
+import PageDividerImage from "../components/page-divider-image/page-divider-image.astro";
+import PageHeading from "../components/page-heading/page-heading.astro";
+import Layout from "../layouts/Layout.astro";
+
+const faqs = [
+  {
+    question: "I am nervous about my fitness, can I scale the workouts?",
+    answer:
+      "We have classes for all levels of fitness, from beginners to advanced, we can adapt the workouts to suit your needs.",
+  },
+  {
+    question: "Is there parking available?",
+    answer:
+      "Yes there is free parking available for all members directly outside the gym.",
+  },
+  {
+    question: "I don't drive what is the best way to get to the gym?",
+    answer:
+      "The Palmersville Metro station is a 10 minute walk from the gym. There is also a bus stop out side of the ASDA that is a 5 minute walk from the gym.",
+  },
+  {
+    question: "Can I cancel my membership at any time?",
+    answer: "Yes, you can cancel your membership at any time.",
+  },
+  {
+    question: "Are there changing rooms at the gym?",
+    answer:
+      "Yes, we have changing rooms and showers available for all members.",
+  },
+  {
+    question: "Can I record / take photos in the gym?",
+    answer:
+      "Yes, you can take photos and record in the gym, we just ask that you are respectful of other members.",
+  },
+];
+---
+
+<Layout>
+  <PageHeading
+    title="We Have a plan that works for you"
+    intro="We also offer drop ins for the price £15 per class, we offer an excluive Legend pricing for people over the age of 55 and over at £6 per class"
+  />
+  <div class="block">
+    <header class="block-header" data-align="center">
+      <h2>Our Plans</h2>
+    </header>
+    <div class="grid">
+      <MembershipCard
+        title="Part Time Membership"
+        price="£75"
+        variant="secondary"
+        description="limited to 2 classes and 1 open gym booking per week"
+      />
+      <MembershipCard
+        title="Unlimited Membership"
+        price="£99"
+        description="Unlimited access to all of our classes & open gym bookings"
+      />
+      <MembershipCard
+        title="Off Peak Membership"
+        price="£60"
+        description="07:00 - 16:30 Weekdays & 08:00-12:00 Sundays"
+      />
+      <MembershipCard
+        title="Kids and Teen"
+        price="£45"
+        description="Access to our kids and teen classes"
+      />
+    </div>
+  </div>
+  <div class="block">
+    <div class="grid-2">
+      <header class="block-header" data-variant="sticky">
+        <h2>Still unsure about joining?</h2>
+        <p>
+          These are the most frequently asked questions about the gym and out
+          memberships, if your question isn't answered here, please feel free to
+          contact us directly, we are happy to help you.
+        </p>
+      </header>
+      <div>
+        {
+          faqs.map((faq) => (
+            <details>
+              <summary>
+                {faq.question}{" "}
+                <ion-icon name="remove-circle-outline" class="remove" />
+                <ion-icon name="add-circle-outline" class="add" />
+              </summary>
+              <p>{faq.answer}</p>
+            </details>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</Layout>

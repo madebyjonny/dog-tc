@@ -1,5 +1,6 @@
 :root {
   --slate-500: #999;
+  --slate-600: #5d5c5c;
   --slate-900: #0d0d0d;
 
   --amber-200: #dfdbd8;
@@ -7,7 +8,7 @@
   --background: var(--slate-900);
   --text: var(--amber-200);
 
-  --border-radius-outer: 30px;
+  --border-radius-outer: 20px;
 }
 
 @layer reset {
@@ -23,6 +24,13 @@
   li {
     margin: 0;
     padding: 0;
+  }
+}
+
+p {
+  margin-bottom: 1rem;
+  &:only-of-type {
+    margin-bottom: 0;
   }
 }
 
@@ -52,7 +60,6 @@
     &:hover,
     &:focus-visible {
       color: var(--text);
-      opacity: 0.8;
     }
   }
 
@@ -81,15 +88,104 @@
     font-size: 1.5rem;
     letter-spacing: 0.08rem;
     color: #fff;
-    line-height: 100%;
+    line-height: 1.2;
     text-wrap: balance;
   }
 }
 
 @layer components {
+  .logo {
+    text-transform: uppercase;
+  }
+
+  .block {
+    padding-inline: 5%;
+    padding-block: 4rem;
+  }
+
+  .block-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    width: 70%;
+
+    &[data-align="center"] {
+      text-align: center;
+      margin-inline: auto;
+    }
+
+    &[data-variant="sticky"] {
+      top: 60px;
+      position: sticky;
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+
+  .grid-2 {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pill {
+    display: flex;
+    height: 32px;
+    padding-inline: 1rem;
+    background-color: var(--slate-600);
+    color: #000;
+  }
+
   h2 {
     font-size: 2rem;
     font-weight: 400;
+  }
+
+  details {
+    border-bottom: 1px solid var(--slate-600);
+    padding-bottom: 1rem;
+    .remove {
+      display: none;
+    }
+
+    &[open] .remove {
+      display: block;
+    }
+
+    &[open] .add {
+      display: none;
+    }
+
+    summary {
+      font-size: 1.25rem;
+      font-weight: 500;
+      padding-block: 1rem 0.5rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 0;
+      -webkit-appearance: none;
+
+      ion-icon {
+        font-size: 32px;
+      }
+
+      &::marker {
+        content: "";
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--slate-500);
+    }
   }
 
   .btn {
@@ -97,14 +193,18 @@
     justify-content: center;
     display: flex;
     max-width: fit-content;
+    text-transform: uppercase;
+    font-size: 0.85rem;
     min-height: 36px;
     padding-inline: 1rem;
-    border-radius: 100px;
+    border-radius: 10px;
     background: #fff;
     color: var(--slate-900);
 
     &[data-variant="outlined"] {
-      transition: color 0.3s, border 0.3s;
+      transition:
+        color 0.3s,
+        border 0.3s;
       background: transparent;
       border: 1px solid var(--slate-500);
       color: var(--slate-500);

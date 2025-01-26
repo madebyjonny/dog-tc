@@ -6,8 +6,13 @@ const { title, description, href, imageURL } = Astro.props;
 <a href={href} class="content-card">
     <img src={imageURL} alt="" aria-hidden />
     <section>
-        <h3>{title}</h3>
-        <p>{description}</p>
+        <div class="description">
+            <div>
+                <h3>{title}</h3>
+                <p>{description}</p>
+            </div>
+            <ion-icon name="arrow-forward-circle-outline" size="30px"></ion-icon>
+        </div>
     </section>
 </a>
 

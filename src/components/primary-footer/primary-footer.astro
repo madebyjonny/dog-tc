@@ -3,20 +3,52 @@ import "./primary-footer.css";
 ---
 <footer class="primary-footer">
     <div>
-        Death or Glory Training Club
+        <span class="logo">Death or Glory<br/> Training Club</span><br/>
+        <span class="credits">© 2025 Death or Glory Training Club</span>
     </div>
-    <nav>
-        <ul role="list">
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/memberships">Memberships</a></li>
-            <li><a href="/classes">Classes</a></li>
-            <li><a href="/timetable">Timetable</a></li>
-            <li><a href="/contact">Contact</a></li>
-        </ul>
-    </nav> 
+    <div class="details">
+        <nav>
+            <ul role="list" class="footer-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/memberships">Memberships</a></li>
+                <li><a href="/classes">Classes</a></li>
+                <li><a href="/timetable">Timetable</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav> 
 
-    <div class="cta">
-        <a class="btn" href="/memberships">Join</a>
+        <div >
+            <ul role="list" class="footer-links">
+                <li>
+                    <a href="https://www.instagram.com/deathorglorytrainingclub">
+                        <ion-icon name="logo-instagram"></ion-icon>Instagram
+                    <a/>
+                </li>
+                <li><a href="https://www.youtube.com/@crossfitdeathorglory5657">
+                    <ion-icon name="logo-youtube"></ion-icon>YouTube
+                <a/></li>
+                <li><a href="https://www.facebook.com/CrossfitDeathorGlory">
+                    <ion-icon name="logo-facebook"></ion-icon>Facebook
+                <a/></li>
+            </ul>
+        </div>
+
+        <div>
+            <ul role="list" class="footer-links">
+                <li><a href="mailto:mark@crossfitdeathorglory.co.uk"><ion-icon name="mail"></ion-icon> mark@crossfitdeathorglory.co.uk</a></li>
+                <li><a href="tel:07876495711"><ion-icon name="call"></ion-icon> 07876495711<a/></li>
+                <li><ion-icon name="location"></ion-icon>
+                    <address>
+                        Unit 6E<br/>
+                        Chollerton Drive<br/>
+                        North Tyneside Industrial Estate<br/>
+                        Benton<br/>
+                        Newcastle upon Tyne<br/>
+                        NE12 9SZ<br/>
+                    </address>
+                </li>
+            </ul>
+        </div>
     </div>
 </footer>

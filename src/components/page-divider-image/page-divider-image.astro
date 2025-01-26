@@ -1,0 +1,9 @@
+---
+import "./page-divider-image.css"
+
+const {imageURL, alt} = Astro.props;
+---
+
+<article class="page-divider-image">
+    <img src={imageURL} alt={alt}  />
+</article>

@@ -1,0 +1,14 @@
+.page-heading {
+  padding-top: 10rem;
+  padding-bottom: 4rem;
+  padding-inline: 5%;
+  gap: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  h1 {
+    font-size: 5rem;
+    font-weight: 300;
+  }
+}

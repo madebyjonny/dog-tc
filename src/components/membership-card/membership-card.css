@@ -1,0 +1,48 @@
+.membership-card {
+  border-radius: var(--border-radius-outer);
+  background-color: #000;
+  border: 1px solid var(--slate-600);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  transition: border 0.2s ease-in-out;
+  gap: 6rem;
+
+  &:hover,
+  &:focus-visible {
+    border: 1px solid #fff;
+    cursor: pointer;
+  }
+
+  .membership-card__header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .membership-card__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.25rem;
+  }
+
+  .membership-card__duration {
+    opacity: 0.6;
+    font-size: 0.85rem;
+  }
+
+  .membership-card__description {
+    color: var(--slate-500);
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    text-wrap: balance;
+  }
+
+  p {
+    margin: 0;
+  }
+}

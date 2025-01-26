@@ -1,5 +1,5 @@
 .classes {
-  padding-inline: 10%;
+  padding-inline: 5%;
   padding-block: 4rem;
   display: flex;
   flex-direction: column;
@@ -14,6 +14,5 @@
 .class-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  flex-wrap: wrap;
   gap: 1rem;
 }
