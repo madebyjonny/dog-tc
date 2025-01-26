@@ -3,11 +3,10 @@
   background-color: #000;
   border: 1px solid var(--slate-600);
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   padding: 1rem;
   transition: border 0.2s ease-in-out;
-  gap: 6rem;
+  gap: 1rem;
 
   &:hover,
   &:focus-visible {
@@ -21,10 +20,16 @@
     gap: 0.5rem;
   }
 
+  .membership-card__headline {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
   .membership-card__footer {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     font-size: 1.25rem;
   }
 

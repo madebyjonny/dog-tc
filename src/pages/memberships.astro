@@ -42,47 +42,49 @@ const faqs = [
 <Layout>
   <PageHeading
     title="We Have a plan that works for you"
-    intro="We also offer drop ins for the price £15 per class, we offer an excluive Legend pricing for people over the age of 55 and over at £6 per class"
+    intro="We aim to offer something for everyone"
   />
   <div class="block">
-    <header class="block-header" data-align="center">
-      <h2>Our Plans</h2>
-    </header>
-    <div class="grid">
-      <MembershipCard
-        title="Part Time Membership"
-        price="£75"
-        variant="secondary"
-        description="limited to 2 classes and 1 open gym booking per week"
-      />
-      <MembershipCard
-        title="Unlimited Membership"
-        price="£99"
-        description="Unlimited access to all of our classes & open gym bookings"
-      />
-      <MembershipCard
-        title="Off Peak Membership"
-        price="£60"
-        description="07:00 - 16:30 Weekdays & 08:00-12:00 Sundays"
-      />
-      <MembershipCard
-        title="Kids and Teen"
-        price="£45"
-        description="Access to our kids and teen classes"
-      />
-    </div>
-  </div>
-  <div class="block">
     <div class="grid-2">
-      <header class="block-header" data-variant="sticky">
-        <h2>Still unsure about joining?</h2>
+      <div class="flex-list">
+        <h2>Our Plans</h2>
+        <MembershipCard
+          title="Part Time Membership"
+          price="£75"
+          variant="secondary"
+          description="limited to 2 classes and 1 open gym booking per week"
+        />
+        <MembershipCard
+          title="Unlimited Membership"
+          price="£99"
+          description="Unlimited access to all of our classes & open gym bookings"
+          isPopular={true}
+        />
+        <MembershipCard
+          title="Off Peak Membership"
+          price="£60"
+          description="07:00 - 16:30 Weekdays & 08:00-12:00 Sundays"
+        />
+        <MembershipCard
+          title="Kids and Teen"
+          price="£45"
+          description="Access to our kids and teen classes"
+        />
         <p>
-          These are the most frequently asked questions about the gym and out
-          memberships, if your question isn't answered here, please feel free to
-          contact us directly, we are happy to help you.
+          We also offer drop ins for the price £15 per class, we offer an
+          exclusive Legend pricing for people of the age of 55 and over at £6
+          per class
         </p>
-      </header>
+      </div>
       <div>
+        <header class="block-header">
+          <h2>Membership FAQ's</h2>
+          <p>
+            These are the most frequently asked questions about the gym and out
+            memberships, if your question isn't answered here, please feel free
+            to contact us directly, we are happy to help you.
+          </p>
+        </header>
         {
           faqs.map((faq) => (
             <details>
