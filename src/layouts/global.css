@@ -103,6 +103,12 @@ p {
     padding-block: 4rem;
   }
 
+  .faq {
+    width: 100%;
+    max-width: 750px;
+    margin-inline: auto;
+  }
+
   .block-header {
     display: flex;
     flex-direction: column;
@@ -112,6 +118,7 @@ p {
     &[data-align="center"] {
       text-align: center;
       margin-inline: auto;
+      max-width: 750px;
     }
 
     &[data-variant="sticky"] {
@@ -135,7 +142,7 @@ p {
   .grid-2 {
     display: grid;
     gap: 5rem;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.5fr;
   }
 
   .pill {
@@ -225,5 +232,11 @@ p {
         opacity: 1;
       }
     }
+  }
+
+  .memberships {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 }

@@ -3,6 +3,7 @@
   background-color: #000;
   border: 1px solid var(--slate-600);
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   padding: 1rem;
   transition: border 0.2s ease-in-out;
@@ -12,6 +13,12 @@
   &:focus-visible {
     border: 1px solid #fff;
     cursor: pointer;
+
+    .btn {
+      border: 1px solid #fff;
+      background-color: #fff;
+      color: #000;
+    }
   }
 
   .membership-card__header {
@@ -28,9 +35,16 @@
 
   .membership-card__footer {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    gap: 1rem;
+    flex-direction: column;
     font-size: 1.25rem;
+    text-wrap: nowrap;
+
+    .btn {
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 100%;
+    }
   }
 
   .membership-card__duration {

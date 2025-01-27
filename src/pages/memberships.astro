@@ -45,59 +45,60 @@ const faqs = [
     intro="We aim to offer something for everyone"
   />
   <div class="block">
-    <div class="grid-2">
-      <div class="flex-list">
-        <h2>Our Plans</h2>
-        <MembershipCard
-          title="Part Time Membership"
-          price="£75"
-          variant="secondary"
-          description="limited to 2 classes and 1 open gym booking per week"
-        />
-        <MembershipCard
-          title="Unlimited Membership"
-          price="£99"
-          description="Unlimited access to all of our classes & open gym bookings"
-          isPopular={true}
-        />
-        <MembershipCard
-          title="Off Peak Membership"
-          price="£60"
-          description="07:00 - 16:30 Weekdays & 08:00-12:00 Sundays"
-        />
-        <MembershipCard
-          title="Kids and Teen"
-          price="£45"
-          description="Access to our kids and teen classes"
-        />
-        <p>
-          We also offer drop ins for the price £15 per class, we offer an
-          exclusive Legend pricing for people of the age of 55 and over at £6
-          per class
-        </p>
-      </div>
-      <div>
-        <header class="block-header">
-          <h2>Membership FAQ's</h2>
-          <p>
-            These are the most frequently asked questions about the gym and out
-            memberships, if your question isn't answered here, please feel free
-            to contact us directly, we are happy to help you.
-          </p>
-        </header>
-        {
-          faqs.map((faq) => (
-            <details>
-              <summary>
-                {faq.question}{" "}
-                <ion-icon name="remove-circle-outline" class="remove" />
-                <ion-icon name="add-circle-outline" class="add" />
-              </summary>
-              <p>{faq.answer}</p>
-            </details>
-          ))
-        }
-      </div>
+    <header class="block-header" data-align="center">
+      <h2>Our Plans</h2>
+      <p>
+        We offer drop ins for the price £15 per class, we offer an exclusive
+        Legend pricing for people of the age of 55 and over at £6 per class
+      </p>
+    </header>
+    <div class="memberships">
+      <MembershipCard
+        title="Part Time Membership"
+        price="£75"
+        variant="secondary"
+        description="limited to 2 classes and 1 open gym booking per week"
+      />
+      <MembershipCard
+        title="Unlimited Membership"
+        price="£99"
+        description="Unlimited access to all of our classes & open gym bookings"
+        isPopular={true}
+      />
+      <MembershipCard
+        title="Off Peak Membership"
+        price="£60"
+        description="07:00 - 16:30 Weekdays & 08:00-12:00 Sundays"
+      />
+      <MembershipCard
+        title="Kids and Teen"
+        price="£45"
+        description="Access to our kids and teen classes"
+      />
+    </div>
+  </div>
+  <div class="block">
+    <header class="block-header" data-align="center">
+      <h2>Membership FAQ's</h2>
+      <p>
+        We have collated a list of the most frequently asked questions from new
+        members, we hope these will help.If you don't find the answer you are
+        looking for please don't hesitate to get in touch.
+      </p>
+    </header>
+    <div class="faq">
+      {
+        faqs.map((faq) => (
+          <details>
+            <summary>
+              {faq.question}{" "}
+              <ion-icon name="remove-circle-outline" class="remove" />
+              <ion-icon name="add-circle-outline" class="add" />
+            </summary>
+            <p>{faq.answer}</p>
+          </details>
+        ))
+      }
     </div>
   </div>
 </Layout>
