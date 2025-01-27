@@ -10,21 +10,23 @@ const { title, price, url, description, isPopular } = Astro.props as {
 };
 ---
 
-<a class="membership-card" href={url}>
+<section class="membership-card">
   <header class="membership-card__header">
     <div class="membership-card__headline">
       <h2>{title}</h2>
       {isPopular && <span class="pill">Popular</span>}
     </div>
+    <p class="membership-card__description">
+      {description}
+    </p>
   </header>
-  <p class="membership-card__description">
-    {description}
-  </p>
 
   <footer class="membership-card__footer">
-    <div>
+    <div class="membership-card__price">
       {price}<span class="membership-card__duration">/per month</span>
     </div>
-    <span class="btn" data-variant="outlined">Get Started</span>
+    <a class="btn" href={url} target="__blank" data-variant="outlined"
+      >Get Started</a
+    >
   </footer>
-</a>
+</section>

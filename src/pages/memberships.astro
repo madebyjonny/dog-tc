@@ -2,6 +2,7 @@
 import ColumnContainer from "../components/column-container/column-container.astro";
 import ContentColumns from "../components/content-columns/content-columns.astro";
 import MembershipCard from "../components/membership-card/membership-card.astro";
+import MemberpshipPlans from "../components/memberships-plans/memberpship-plans.astro";
 import PageDividerImage from "../components/page-divider-image/page-divider-image.astro";
 import PageHeading from "../components/page-heading/page-heading.astro";
 import Layout from "../layouts/Layout.astro";
@@ -40,43 +41,30 @@ const faqs = [
 ---
 
 <Layout>
-  <PageHeading
-    title="We Have a plan that works for you"
-    intro="We aim to offer something for everyone"
-  />
-  <div class="block">
-    <header class="block-header" data-align="center">
-      <h2>Our Plans</h2>
-      <p>
-        We offer drop ins for the price £15 per class, we offer an exclusive
-        Legend pricing for people of the age of 55 and over at £6 per class
-      </p>
-    </header>
-    <div class="memberships">
-      <MembershipCard
-        title="Part Time Membership"
-        price="£75"
-        variant="secondary"
-        description="limited to 2 classes and 1 open gym booking per week"
-      />
-      <MembershipCard
-        title="Unlimited Membership"
-        price="£99"
-        description="Unlimited access to all of our classes & open gym bookings"
-        isPopular={true}
-      />
-      <MembershipCard
-        title="Off Peak Membership"
-        price="£60"
-        description="07:00 - 16:30 Weekdays & 08:00-12:00 Sundays"
-      />
-      <MembershipCard
-        title="Kids and Teen"
-        price="£45"
-        description="Access to our kids and teen classes"
-      />
-    </div>
-  </div>
+  <MemberpshipPlans>
+    <MembershipCard
+      title="Standard"
+      price="£75"
+      variant="secondary"
+      description="limited to 2 classes and 1 open gym booking per week"
+    />
+    <MembershipCard
+      title="Unlimited"
+      price="£99"
+      description="Unlimited access to all of our classes & open gym bookings"
+      isPopular={true}
+    />
+    <MembershipCard
+      title="Off Peak"
+      price="£60"
+      description="07:00 - 16:30 Weekdays & 08:00-12:00 Sundays"
+    />
+    <MembershipCard
+      title="Kids and Teen"
+      price="£45"
+      description="Access to our kids and teen classes"
+    />
+  </MemberpshipPlans>
   <div class="block">
     <header class="block-header" data-align="center">
       <h2>Membership FAQ's</h2>

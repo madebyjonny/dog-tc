@@ -7,19 +7,7 @@
   justify-content: space-between;
   padding: 1rem;
   transition: border 0.2s ease-in-out;
-  gap: 1rem;
-
-  &:hover,
-  &:focus-visible {
-    border: 1px solid #fff;
-    cursor: pointer;
-
-    .btn {
-      border: 1px solid #fff;
-      background-color: #fff;
-      color: #000;
-    }
-  }
+  gap: 2rem;
 
   .membership-card__header {
     display: flex;
@@ -29,7 +17,9 @@
 
   .membership-card__headline {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 30px;
     gap: 0.5rem;
   }
 
@@ -45,6 +35,10 @@
       width: 100%;
       max-width: 100%;
     }
+  }
+
+  .membership-card__price {
+    font-size: 2rem;
   }
 
   .membership-card__duration {

@@ -116,9 +116,10 @@ p {
     margin-bottom: 2rem;
 
     &[data-align="center"] {
+      align-items: center;
       text-align: center;
       margin-inline: auto;
-      max-width: 750px;
+      max-width: 550px;
     }
 
     &[data-variant="sticky"] {
@@ -217,6 +218,11 @@ p {
     background: #fff;
     color: var(--slate-900);
 
+    &:hover,
+    &:focus-visible {
+      cursor: pointer;
+    }
+
     &[data-variant="outlined"] {
       transition:
         color 0.3s,
@@ -228,15 +234,10 @@ p {
       &:hover,
       &:focus-visible {
         color: #fff;
+
         border: 1px solid #fff;
         opacity: 1;
       }
     }
-  }
-
-  .memberships {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 }
