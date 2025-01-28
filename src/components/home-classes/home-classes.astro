@@ -1,56 +1,60 @@
 ---
 import "./home-classes.css";
 import ContentCard from "../link-content-card/link-content-card.astro";
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 import CrossFit from "../../assets/crossfit.webp";
 import Hyrox from "../../assets/hyrox.webp";
 import Strength from "../../assets/strength.webp";
 
 type ClassType = {
-    title: string;
-    href: string;
-    imageURL: string;
-    description: string;
+  title: string;
+  href: string;
+  imageURL: string;
+  description: string;
 };
 
 const classes: ClassType[] = [
-    {
-        title: "CrossFit",
-        imageURL: "/crossfit.webp",
-        href:"/classes#crossfit",
-        description: "Our main class. A constantly varied high intensity workout that will keep you on your toes.",
-    },
-    {
-        title: "Hyrox",
-        imageURL: "/hyrox.webp",
-        href:"/classes#hyrox",
-        description: "Need to work on something specific? Open gym is the perfect time to do just that.",
-    },
-    {
-        title: "Strength",
-        imageURL: "/strength.webp",
-        href:"/classes#strength",
-        description: "Our strength class is designed to help you build your strength.",
-    }
-]
+  {
+    title: "CrossFit",
+    imageURL: "/crossfit.webp",
+    href: "/classes#crossfit",
+    description:
+      "Our main class. A constantly varied high intensity workout that will keep you on your toes.",
+  },
+  {
+    title: "Hyrox",
+    imageURL: "/hyrox.webp",
+    href: "/classes#hyrox",
+    description:
+      "Need to work on something specific? Open gym is the perfect time to do just that.",
+  },
+  {
+    title: "Strength",
+    imageURL: "/strength.webp",
+    href: "/classes#strength-and-conditioning",
+    description:
+      "Our strength class is designed to help you build your strength.",
+  },
+];
 ---
 
-
 <article class="classes">
-    <header>
-        <h2>Our Classes</h2>
-        <a href="/classes" class="btn" data-variant="outlined">Find out more</a>
-    </header>
-    <ul role="list" class="class-list">
-        {classes.map((cls) => (
-            <li>
-                <ContentCard 
-                    title={cls.title} 
-                    description={cls.description} 
-                    href={cls.href} 
-                    imageURL={cls.imageURL} 
-                />
-            </li>
-        ))}
-    </ul>
+  <header>
+    <h2>Our Classes</h2>
+    <a href="/classes" class="btn" data-variant="outlined">Find out more</a>
+  </header>
+  <ul role="list" class="class-list">
+    {
+      classes.map((cls) => (
+        <li>
+          <ContentCard
+            title={cls.title}
+            description={cls.description}
+            href={cls.href}
+            imageURL={cls.imageURL}
+          />
+        </li>
+      ))
+    }
+  </ul>
 </article>

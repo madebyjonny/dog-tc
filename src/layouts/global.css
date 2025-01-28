@@ -37,7 +37,6 @@ p {
 @layer base {
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 50px;
   }
 
   body {
@@ -50,6 +49,10 @@ p {
     overflow-x: hidden;
     padding: 0;
     margin: 0;
+  }
+
+  :target {
+    scroll-margin-top: 70px;
   }
 
   a {
