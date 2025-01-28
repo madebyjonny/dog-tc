@@ -1,11 +1,181 @@
 ---
+import { desc } from "motion/react-client";
+import ColumnContainer from "../components/column-container/column-container.astro";
+import ContentColumns from "../components/content-columns/content-columns.astro";
 import PageHeading from "../components/page-heading/page-heading.astro";
 import Layout from "../layouts/Layout.astro";
+
+const crossFitClasses = [
+  {
+    name: "CrossFit",
+    description: `This is your standard CrossFit class, we will focus on one movement 
+    for half of the class, this wil involve drills to improve confidence with movements. 
+    We then finish with a WOD, this is an intense workout to put your skills into practice, 
+    we split these into scaled and RX (as perscribed) meaning that they can be adapted for people 
+    at all levels`,
+    duration: "45min",
+  },
+  {
+    name: "Legends (Age 55+)",
+    description: `Similar to CrossFit, but aimed to be more tailored for people of the age of 55 and over.`,
+    duration: "45min",
+  },
+  {
+    name: "Team WOD",
+    description: `These are team workouts, 45min high intensity workout where you share the work with other members of the gym.
+    We randomise the teams every week so you can meet different people from the gym and also so you can train with similar level people`,
+    duration: "45min",
+  },
+  {
+    name: "Beginners Class",
+    description: `Designed to help new comers onboard to the movements, as CrossFit can look daunting from the outside, this is specifically, to
+    be very hands on to help people get their confidence with the movements.`,
+    duration: "45min",
+  },
+  {
+    name: "Comp Class",
+    description: `Competitions are a big part of CrossFit, this class is designed for people who are looking to emulate a competition experience, 
+    we have multiple workouts with a little break in between. These classes are designed for more experienced athletes who can perform movements 
+    without scaling.`,
+    duration: "45min",
+  },
+];
+const HyroxClasses = [
+  {
+    name: "Hyrox",
+    description: `These classes are focused on improving your engine, so you can be best prepared for your next Hyrox events. These classes
+    will work similar to Endure classes except there won't be movements from CrossFit e.g. the gymnastics or Olympic weight lifting`,
+    duration: "45min",
+  },
+];
+const SACClasses = [
+  {
+    name: "Strengh & Conditioning",
+    description: `These classes are designed to help you with accessory work. We have a set programming for you to follow, but these classes 
+    are less hands on from the coaches you can work through the workout how you want, there will be a coach on hand to help. These workouts have a cardio aspect, 
+    but also traditional weight lifting and mobility.`,
+    duration: "45min",
+  },
+  {
+    name: "Endure",
+    description: `Endure is a conditioning class similar to what you may find in a CrossFit WOD, but this class is 45mins vs the shorter time found in a CrossFit Class, 
+    we have a mix of individual, pairs, and team workouts which will change week by week`,
+    duration: "45min",
+  },
+];
+const KidClasses = [{ name: "", description: "", duration: "" }];
 ---
 
 <Layout>
   <PageHeading
-    title="more about our classes"
-    intro="Varied styles of training to help you become a well rounded athlete"
+    title="Varied styles of training suited to all levels"
+    intro=" "
   />
+  <div class="block">
+    <ColumnContainer imageURL="/crossfit.webp">
+      <h2>CrossFit</h2>
+      <p>
+        CrossFit is a high-intensity fitness program that combines elements of
+        weightlifting, cardio, gymnastics, and functional movement to improve
+        overall strength, endurance, and agility. Developed in the early 2000s,
+        CrossFit emphasizes varied, scalable workouts known as WODs (Workouts of
+        the Day), which challenge participants to push their physical limits.
+        These workouts are designed to train multiple muscle groups and energy
+        systems through exercises like squats, deadlifts, pull-ups, and sprints,
+        performed in a group setting to foster a sense of community and
+        motivation. Suitable for all fitness levels, CrossFit focuses on
+        improving performance in real-world tasks while promoting a balance of
+        power, speed, flexibility, and stamina.
+      </p>
+      <h3>Class types</h3>
+      {
+        crossFitClasses.map((cls) => (
+          <details>
+            <summary>
+              <div class="class-title">
+                <span class="time">
+                  <ion-icon name="time" /> {cls.duration}
+                </span>
+                {cls.name}{" "}
+              </div>
+              <ion-icon name="remove-circle-outline" class="remove" />
+              <ion-icon name="add-circle-outline" class="add" />
+            </summary>
+            <p>{cls.description}</p>
+          </details>
+        ))
+      }
+    </ColumnContainer>
+  </div>
+  <div class="block">
+    <ColumnContainer imageURL="/hyrox.webp">
+      <h2>Hyrox</h2>
+      <p>
+        Hyrox is a global fitness race designed to test strength, endurance, and
+        overall athletic performance through a standardized format that combines
+        running and functional exercises. The event consists of eight
+        1-kilometer runs, each followed by a functional workout station, such as
+        sled pushes, sled pulls, rowing, burpee broad jumps, or wall balls.
+        Unlike CrossFit, which emphasizes varied workouts, Hyrox features a
+        consistent structure, making it ideal for athletes to track and compare
+        their performance over time. Open to all fitness levels, participants
+        can compete individually, in doubles, or as part of a team. Hyrox has
+        gained popularity for its balance of endurance and strength challenges,
+        offering a structured yet demanding fitness experience.
+      </p>
+      <h3>Class types</h3>
+      {
+        HyroxClasses.map((cls) => (
+          <details>
+            <summary>
+              <div class="class-title">
+                <span class="time">
+                  <ion-icon name="time" /> {cls.duration}
+                </span>
+                {cls.name}{" "}
+              </div>
+              <ion-icon name="remove-circle-outline" class="remove" />
+              <ion-icon name="add-circle-outline" class="add" />
+            </summary>
+            <p>{cls.description}</p>
+          </details>
+        ))
+      }
+    </ColumnContainer>
+  </div>
+  <div class="block">
+    <ColumnContainer imageURL="/strength.webp">
+      <h2>Strength & Conditioning</h2>
+      <p>
+        Strength and conditioning classes are designed to complement primary
+        fitness programs like Hyrox and CrossFit by focusing on building a solid
+        foundation of strength, mobility, and injury prevention. These classes
+        target specific muscle groups, often overlooked in high-intensity
+        training, to enhance overall performance and resilience. Incorporating
+        exercises like accessory lifts, core stabilisation, mobility drills, and
+        unilateral movements, these sessions help correct imbalances, improve
+        flexibility, and support joint health. By strengthening the body's
+        weaker areas, participants can increase their power output, reduce
+        fatigue during workouts, and minimize the risk of injuries.
+      </p>
+      <h3>Class types</h3>
+      {
+        SACClasses.map((cls) => (
+          <details>
+            <summary>
+              <div class="class-title">
+                <span class="time">
+                  <ion-icon name="time" /> {cls.duration}
+                </span>
+                {cls.name}{" "}
+              </div>
+              <ion-icon name="remove-circle-outline" class="remove" />
+              <ion-icon name="add-circle-outline" class="add" />
+            </summary>
+            <p>{cls.description}</p>
+          </details>
+        ))
+      }
+    </ColumnContainer>
+  </div>
 </Layout>

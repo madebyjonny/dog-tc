@@ -170,6 +170,11 @@ p {
       display: none;
     }
 
+    .remove,
+    .add {
+      font-size: 32px !important;
+    }
+
     &[open] .remove {
       display: block;
     }
@@ -188,10 +193,6 @@ p {
       justify-content: space-between;
       padding-left: 0;
       -webkit-appearance: none;
-
-      ion-icon {
-        font-size: 32px !important;
-      }
 
       &::marker {
         content: "";
@@ -239,5 +240,39 @@ p {
         opacity: 1;
       }
     }
+  }
+
+  .time {
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    gap: 0.2rem;
+    color: var(--slate-500);
+    font-size: 0.85rem;
+  }
+
+  .class-title {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    ion-icon {
+      font-size: 1rem;
+    }
+  }
+
+  .title {
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+
+  .square-image {
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-outer);
   }
 }

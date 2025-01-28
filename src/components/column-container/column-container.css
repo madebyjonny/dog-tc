@@ -1,21 +1,17 @@
 .content-container {
   display: flex;
-  padding-inline: 5%;
   margin-bottom: 4rem;
-  gap: 2rem;
+  gap: 3rem;
 
   > * {
     flex: 1;
   }
+}
 
+.content-container__intro {
   h2 {
     font-size: 1rem;
     color: var(--slate-500);
-  }
-
-  h3 {
-    font-size: 3rem;
-    line-height: 1.2;
   }
 }
 
