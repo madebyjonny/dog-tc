@@ -1,26 +1,32 @@
 ---
-import PrimaryFooter from '../components/primary-footer/primary-footer.astro';
-import PrimaryNav from '../components/primary-nav/primary-nav.astro';
-import './global.css';
+import PrimaryFooter from "../components/primary-footer/primary-footer.astro";
+import PrimaryNav from "../components/primary-nav/primary-nav.astro";
+import "./global.css";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Death or Glory Training Club</title>
-		<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
-	</head>
-	<body>
-		<PrimaryNav />
-		<slot />
-		<PrimaryFooter />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Death or Glory Training Club</title>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <slot name="scripts" />
+  </head>
+  <body>
+    <PrimaryNav />
+    <slot />
+    <PrimaryFooter />
+  </body>
 </html>
-

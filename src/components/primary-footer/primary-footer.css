@@ -38,20 +38,3 @@ address {
   color: var(--slate-500);
   font-size: 0.85rem;
 }
-
-.footer-links {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  a,
-  li {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    gap: 0.5rem;
-  }
-
-  li {
-    align-items: flex-start;
-  }
-}

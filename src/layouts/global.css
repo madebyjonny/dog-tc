@@ -278,4 +278,37 @@ p {
     height: auto;
     border-radius: var(--border-radius-outer);
   }
+
+  .contact-container {
+    position: relative;
+    padding-left: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+  }
+
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    a,
+    li {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      gap: 0.5rem;
+    }
+
+    li {
+      align-items: flex-start;
+    }
+  }
+
+  #map {
+  }
 }
