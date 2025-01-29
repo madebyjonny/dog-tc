@@ -7,7 +7,14 @@
   background-color: #000;
   aspect-ratio: 9 / 14;
 
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+
   img {
+    transition: transform 1s;
     position: absolute;
     top: 0;
     left: 0;
