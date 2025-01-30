@@ -37,10 +37,29 @@
   span {
     display: inline-flex;
   }
+
+  @media (width <= 1000px) {
+    h1 {
+      font-size: 5rem;
+    }
+  }
+
+  @media (width <= 430px) {
+    header {
+      margin-top: 80px;
+    }
+    h1 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
 }
 
 .gallery-columns {
-  --center-image-transform: 120px;
+  --center-image-transform: 10%;
   flex-shrink: 0;
   width: 1900px;
   flex: 1;
@@ -76,6 +95,15 @@
       aspect-ratio: 3.5 / 4;
       border-radius: var(--border-radius-outer);
     }
+  }
+
+  @media (width <= 800px) {
+    width: 1024px;
+  }
+
+  @media (width <= 430px) {
+    width: 700px;
+    margin-top: 0;
   }
 }
 

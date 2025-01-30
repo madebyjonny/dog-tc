@@ -13,4 +13,12 @@
     font-size: 5rem;
     font-weight: 300;
   }
+
+  @media (width <= 430px) {
+    flex-direction: column;
+    h1 {
+      font-size: 3rem;
+      font-weight: 300;
+    }
+  }
 }

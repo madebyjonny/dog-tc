@@ -1,0 +1,24 @@
+---
+import ContentColumns from "../content-columns/content-columns.astro"
+import "./class-card.css"
+
+const {name, times} = Astro.props as {
+    name: string,
+    times: string[]
+}
+
+
+---
+
+
+<article class="class-card">
+    <div>
+        <h2 class="class-card__title">{name}</h2>
+    </div>
+
+    <div class="class-card__times-details">
+        <div class="class-card__times">
+            {times.map(time => <span class="class-card__time">{time}</span>)}
+        </div>
+    </div>
+</article>

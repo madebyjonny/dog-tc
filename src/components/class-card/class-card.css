@@ -1,0 +1,29 @@
+.class-card {
+  padding: 1rem;
+  border-radius: var(--border-radius-outer);
+  border: 1px solid var(--slate-600);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  @media (width <= 650px) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .class-card__times-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .class-card__times {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+  }
+
+  .class-card__time {
+    color: var(--slate-500);
+    text-wrap: nowrap;
+  }
+}

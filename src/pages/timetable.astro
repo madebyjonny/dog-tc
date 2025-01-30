@@ -1,6 +1,57 @@
 ---
+import ClassCard from "../components/class-card/class-card.astro";
+import ColumnContainer from "../components/column-container/column-container.astro";
 import PageHeading from "../components/page-heading/page-heading.astro";
 import Layout from "../layouts/Layout.astro";
+
+
+const daysOrder = ["monday", "tuesday", "wednesday", "thursday", "friday","sunday", "saturday"];
+
+
+const classData = [
+  {name: "CrossFit Legends", day: "monday", times: ["10:30-11:30"]},
+  {name: "CrossFit Legends", day: "friday", times: ["10:30-11:30"]},
+  {name: "CrossFit Legends", day: "wednesday", times: ["10:30-11:30"]},
+
+  {name: "CrossFit", day: "monday", times: ["06:00-07:00", "07:00-:08:00", "09:30-10:30", "16:30-17:30", "17:30-18:30", "18:30-19:30", "19:30-20:30"]},
+  {name: "CrossFit", day: "wednesday", times: ["06:00-07:00", "07:00-:08:00", "09:30-10:30", "16:30-17:30", "17:30-18:30", "18:30-19:30", "19:30-20:30"]},
+  {name: "CrossFit", day: "friday", times: ["06:00-07:00", "07:00-:08:00", "09:30-10:30", "16:30-17:30", "17:30-18:30", "18:30-19:30"]},
+
+  {name: "Open Gym", day: "thursday", times: ["18:30-17:30"]},
+  {name: "Open Gym", day: "tuesday", times: ["18:30-17:30"]},
+
+  {name: "Strength & Conditioning", day: "tuesday", times: ["06:00-07:00", "07:00-08:00", "16:30-17:30", "17:30-18:30"]},
+  {name: "Strength & Conditioning", day: "thursday", times: ["06:00-07:00", "07:00-08:00", "16:30-17:30", "17:30-18:30"]},
+  {name: "Strength & Conditioning", day: "saturday", times: ["08:00-09:00"]},
+
+  {name: "Team WOD", day: "saturday", times: [ "09:00-10:00"]},
+  {name: "Team WOD", day: "sunday", times: [ "09:00-10:00"]},
+
+  {name: "Comp Class", day: "saturday", times: [ "10:00-12:00"]},
+
+  {name: "Crossfit Beginners Class", day: "sunday", times: [ "10:00-12:00"]},
+
+  {name: "Hyrox", day: "monday", times: ["06:00-07:00", "16:30-17:30", "17:30-18:30"]},
+  {name: "Hyrox", day: "wednesday", times: ["06:00-07:00", "16:30-17:30", "17:30-18:30"]},
+  {name: "Hyrox", day: "sunday", times: ["06:00-07:00", "16:30-17:30", "17:30-18:30"]},
+  {name: "Hyrox", day: "friday", times: ["16:30-17:30", "17:30-18:30"]},
+  {name: "Hyrox", day: "saturday", times: ["09:00-10:00"]},
+
+  {name: "Kids Class", day: "tuesday", times: ["16:00-16:45"]},
+  {name: "Kids Class", day: "thursday", times: ["16:00-16:45"]},
+  {name: "Kids Class", day: "sunday", times: ["09:00-10:00"]},
+
+  {name: "Endure", day: "thursday", times: ["06:00-07:00", "09:30-10:30", "17:00-18:00", "18:00-19:00"]},
+]
+
+const classes = Object.groupBy(classData, ({ day }) => day);
+
+
+const sortedClasses = Object.keys(classes).sort((a, b) => {
+  return daysOrder.indexOf(a) - daysOrder.indexOf(b)
+})
+console.log(sortedClasses)
+
 ---
 
 <Layout>
@@ -8,4 +59,16 @@ import Layout from "../layouts/Layout.astro";
     title="Our Schedule"
     intro="There are different classes available throughout the week"
   />
+
+  {sortedClasses.map(day => 
+    <div class="block">
+      <ColumnContainer title={day}>
+        <div class="timetable-list">
+          {(classes[day] || []).map(cls => 
+            <ClassCard name={cls.name} times={cls.times} />
+          )}
+        </div>
+      </ColumnContainer>
+    </div>
+  )}
 </Layout>

@@ -35,4 +35,10 @@
     display: flex;
     justify-content: flex-end;
   }
+
+  @media (width <= 430px) {
+    nav {
+      display: none;
+    }
+  }
 }
