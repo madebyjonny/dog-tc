@@ -295,7 +295,7 @@ p {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
 
-    @media (width <= 430px) {
+    @media (width <= 896px) {
       padding-left: 0;
       grid-template-columns: 1fr;
     }

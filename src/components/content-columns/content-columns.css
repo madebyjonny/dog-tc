@@ -1,7 +1,7 @@
 .content-columns {
   columns: 2;
 
-  @media (width <= 430px) {
+  @media (width <= 600px) {
     columns: 1;
   }
 }
