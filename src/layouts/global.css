@@ -326,6 +326,7 @@ p {
 
   #map {
     min-height: 50vh;
+    z-index: 0;
   }
 
   .timetable-list {

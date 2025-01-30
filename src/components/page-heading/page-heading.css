@@ -14,7 +14,7 @@
     font-weight: 300;
   }
 
-  @media (width <= 430px) {
+  @media (width <= 1000px) {
     flex-direction: column;
     h1 {
       font-size: 3rem;

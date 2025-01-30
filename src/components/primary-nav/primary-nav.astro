@@ -5,7 +5,7 @@ import "./primary-nav.css";
     <div>
         Death or Glory<br/> Training Club
     </div>
-    <nav>
+    <nav class="primary-mobile-nav" data-mobile-active="false">
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/about">About</a></li>
@@ -18,5 +18,20 @@ import "./primary-nav.css";
 
     <div class="cta">
         <a class="btn" href="/memberships">Join</a>
+        <buttpn id="mobile-menu-btn" class="btn" data-variant="outlined" data-mobile-active="false">
+            <ion-icon name="menu"></ion-icon>
+        </buttpn>
     </div>
 </header>
+
+
+<script>
+    const menuButton = document.querySelector("#mobile-menu-btn");
+    const menu = document.querySelector("nav[data-mobile-active]");
+
+    menuButton?.addEventListener("click", () => {
+        const state =  menu?.getAttribute("data-mobile-active") === "false" ? "true" : "false"
+        menu?.setAttribute("data-mobile-active", state.toString())
+        menuButton?.setAttribute("data-mobile-active", state.toString())
+    })
+</script>
