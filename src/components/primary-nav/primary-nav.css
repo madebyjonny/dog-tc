@@ -53,7 +53,7 @@
     display: none;
   }
 
-  [data-mobile-active="false"] .close {
+  [data-mobile-active="true"] .menu {
     display: none;
   }
 
@@ -65,6 +65,7 @@
   @media (width < 850px) {
     #mobile-menu-btn {
       display: flex;
+      z-index: 9999999;
     }
 
     nav {
