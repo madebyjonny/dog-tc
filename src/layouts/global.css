@@ -201,10 +201,11 @@ p {
       justify-content: space-between;
       padding-left: 0;
       -webkit-appearance: none;
+      appearance: none;
+    }
 
-      &::marker {
-        content: "";
-      }
+    summary::marker {
+      content: "";
     }
 
     p {
@@ -212,6 +213,14 @@ p {
       font-weight: 300;
       color: var(--slate-500);
     }
+  }
+
+  details > summary {
+    list-style: none;
+  }
+
+  details summary::-webkit-details-marker {
+    display: none;
   }
 
   .btn {
