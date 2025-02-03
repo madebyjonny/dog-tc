@@ -13,10 +13,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
   a {
     display: flex;
+    font-size: 0.85rem;
     align-items: center;
     color: #000;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.75rem;
+    letter-spacing: 0.04rem;
   }
 }
 
