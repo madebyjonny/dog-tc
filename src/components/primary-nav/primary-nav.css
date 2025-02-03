@@ -24,8 +24,12 @@
     flex: 1;
   }
 
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+
   ul {
-    flex: 1;
     display: flex;
     list-style: none;
     gap: 1rem;
