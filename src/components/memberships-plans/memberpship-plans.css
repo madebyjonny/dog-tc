@@ -17,3 +17,24 @@
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
 }
+
+.inline-banner {
+  padding: 1rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--slate-600);
+  border-radius: var(--border-radius-outer);
+  margin-inline: auto;
+  max-width: 77%;
+  > p {
+    flex: 1;
+  }
+
+  @media (width < 600px) {
+    max-width: 73%;
+    text-align: center;
+    flex-direction: column;
+  }
+}
