@@ -41,6 +41,7 @@ const faqs = [
 ---
 
 <Layout>
+
   <MemberpshipPlans>
     <MembershipCard
       title="Standard"
@@ -80,8 +81,10 @@ const faqs = [
           <details>
             <summary>
               {faq.question}{" "}
-              <ion-icon name="remove-circle-outline" class="remove" />
-              <ion-icon name="add-circle-outline" class="add" />
+              <div>
+                <ion-icon name="remove-circle-outline" class="remove" />
+                <ion-icon name="add-circle-outline" class="add" />
+              </div>
             </summary>
             <p>{faq.answer}</p>
           </details>
