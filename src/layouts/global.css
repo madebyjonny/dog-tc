@@ -208,6 +208,13 @@ p {
       content: "";
     }
 
+    .icon {
+      min-width: 50px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+    }
+
     p {
       font-size: 1rem;
       font-weight: 300;
