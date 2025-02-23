@@ -1,12 +1,12 @@
 ---
 import "./membership-card.css";
-const { title, price, url, description, isPopular } = Astro.props as {
+const { title, price, url, description, isPopular, oneOff = false } = Astro.props as {
   title: string;
   description: string;
   price: string;
   url: string;
   isPopular: boolean;
-  variant: "secondary" | "primary" | "tertiary";
+  oneOff: Boolean
 };
 ---
 
@@ -23,10 +23,11 @@ const { title, price, url, description, isPopular } = Astro.props as {
 
   <footer class="membership-card__footer">
     <div class="membership-card__price">
-      {price}<span class="membership-card__duration">/per month</span>
+      {price} {!oneOff && <span class="membership-card__duration">/per month</span>}
     </div>
-    <a class="btn" href={url} target="__blank" data-variant="outlined"
-      >Coming Soon</a
+    
+    <a class="btn" data-disabled={url === undefined} href={url} target="__blank" data-variant="outlined" 
+      >{url ? "Sign Up" : "Coming Soon"}</a
     >
   </footer>
 </section>

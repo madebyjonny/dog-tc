@@ -34,7 +34,9 @@
       box-sizing: border-box;
       width: 100%;
       max-width: 100%;
-      pointer-events: none;
+      &[data-disabled="true"] {
+        pointer-events: none;
+      }
     }
   }
 
@@ -49,6 +51,7 @@
 
   .membership-card__description {
     color: var(--slate-500);
+    font-size: 0.85rem;
   }
 
   h2 {
