@@ -7,6 +7,10 @@
   z-index: 99;
 }
 
+.logo {
+  border-radius: 0;
+}
+
 .promo-banner {
   background-color: #fff;
   padding-block: 0.5rem;

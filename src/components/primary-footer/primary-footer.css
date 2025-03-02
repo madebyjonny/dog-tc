@@ -13,6 +13,12 @@
   @media (width < 895px) {
     flex-direction: column;
   }
+
+  .logo {
+    display: block;
+    opacity: 0.6;
+    width: 200px;
+  }
 }
 
 .details {
