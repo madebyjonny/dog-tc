@@ -2,6 +2,13 @@
 import PrimaryFooter from "../components/primary-footer/primary-footer.astro";
 import PrimaryNav from "../components/primary-nav/primary-nav.astro";
 import "./global.css";
+
+const { title, description, keywords, } = Astro.props as {
+  title: string;
+  description: string;
+  keywords: string;
+};
+
 ---
 
 <!doctype html>
@@ -10,9 +17,11 @@ import "./global.css";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description || "Death or Glory Training Club"} />
+    <meta name="keywords" content={keywords || "Crossfit, Gym, Newcastle, Fitness, Health"} />
     <meta name="generator" content={Astro.generator} />
-    <title>Death or Glory Training Club</title>
+    <title>{title || "Death or Glory Training Club"}</title>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
