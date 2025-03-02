@@ -44,3 +44,12 @@ address {
   color: var(--slate-500);
   font-size: 0.85rem;
 }
+
+.credit-container {
+  @media (width < 600px) {
+    order: 9;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+}
