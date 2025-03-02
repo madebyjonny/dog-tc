@@ -22,6 +22,21 @@ const { title, description, keywords, } = Astro.props as {
     <meta name="keywords" content={keywords || "Crossfit, Gym, Newcastle, Fitness, Health"} />
     <meta name="generator" content={Astro.generator} />
     <title>{title || "Death or Glory Training Club"}</title>
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content={title || "Death or Glory Training Club"}>
+    <meta property="og:description" content={description || "Death or Glory Training Club"}>
+    <meta property="og:url" content="https://www.deathorglorytrainingclub.co.uk/">
+    <meta property="og:image" content="https://www.deathorglorytrainingclub.co.uk/hero-image.jpg">
+    <meta property="og:site_name" content="Death or Glory Training Club">
+    <meta property="og:locale" content="en_GB">
+    
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content={title || "Death or Glory Training Club"}>
+    <meta name="twitter:description" content={description || "Death or Glory Training Club"}>
+    <meta name="twitter:image" content="https://www.deathorglorytrainingclub.co.uk/hero-image.jpg">
+    <meta name="twitter:url" content="https://www.deathorglorytrainingclub.co.uk/">
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
