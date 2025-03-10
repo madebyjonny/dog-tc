@@ -1,0 +1,66 @@
+---
+import "./events.css";
+import ContentCard from "../link-content-card/link-content-card.astro";
+import { format } from 'date-fns'
+
+const {showHeading = true} = Astro.props as {
+    showHeading: boolean,
+}
+
+type EventType = {
+  title: string;
+  date: string;
+  href: string | null;
+  label: string;
+  time: string;
+  description: string;
+};
+
+const events: EventType[] = [
+  {
+    title: "Open Day",
+    date: "03-23-2025",
+    time: "from 9am",
+    href: "https://wa.me/+447876495711",
+    label: "Book Now",
+    description: "Use the book now button to message us to show interest in our open day.",
+  },
+  {
+    title: "Hyrox Simulation",
+    date: "04-05-2025",
+    time: "from 9am",
+    href: null,
+    label: "coming soon",
+    description:
+      "Hyrox simulation day, to test where you are at before the next Hyrox event.",
+  },
+];
+---
+
+<article class="events">
+  {showHeading &&
+    <header>
+      <h2>Events</h2>
+    </header> 
+  }
+  <ul role="list" class="event-list">
+    {
+      events.map((evt) => (
+        <li class="event-list__item">
+          <div>
+            <p class="event-list__date">
+              <ion-icon name="calendar" /> {format(new Date(evt.date), 'do MMMM yyyy')} {evt.time}
+            </p>
+            <h3>{evt.title}</h3>
+          </div>
+          <div>
+            <p>{evt.description}</p>
+          </div>
+          <div class="event-list__cta">
+            <a href={evt.href} class="btn" data-variant="outlined" target="__blank">{evt.label}</a>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</article>
