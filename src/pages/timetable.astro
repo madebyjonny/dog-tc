@@ -46,7 +46,6 @@ const classes = Object.groupBy(classData, ({ day }) => day);
 const sortedClasses = Object.keys(classes).sort((a, b) => {
   return daysOrder.indexOf(a) - daysOrder.indexOf(b)
 })
-console.log(sortedClasses)
 
 ---
 
