@@ -2,17 +2,19 @@
   display: flex;
   margin-bottom: 4rem;
   gap: 3rem;
+}
 
-  > * {
-    flex: 1;
-  }
+.content-container > * {
+  flex: 1;
+}
 
-  h2 {
-    position: sticky;
-    top: 100px;
-  }
+.content-container h2 {
+  position: sticky;
+  top: 100px;
+}
 
-  @media (width <= 800px) {
+@media (width <= 800px) {
+  .content-container {
     flex-direction: column;
   }
 }

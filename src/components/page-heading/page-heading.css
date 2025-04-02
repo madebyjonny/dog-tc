@@ -8,18 +8,20 @@
   align-items: flex-end;
   background-color: #000;
   border-bottom: 1px solid #333;
+}
 
-  h1 {
-    font-size: 5rem;
-    font-weight: 300;
-  }
+.page-heading h1 {
+  font-size: 5rem;
+  font-weight: 300;
+}
 
-  @media (width <= 896px) {
+@media (width <= 1000px) {
+  .page-heading {
     flex-direction: column;
     align-items: flex-start;
-    h1 {
-      font-size: 3rem;
-      font-weight: 300;
-    }
+  }
+  .page-heading h1 {
+    font-size: 3rem;
+    font-weight: 300;
   }
 }

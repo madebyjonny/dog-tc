@@ -5,25 +5,27 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+}
 
-  @media (width <= 650px) {
+.class-card .class-card__times-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.class-card .class-card__times {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+.class-card .class-card__time {
+  color: var(--slate-500);
+  text-wrap: nowrap;
+}
+
+@media (width <= 650px) {
+  .class-card {
     grid-template-columns: 1fr;
     gap: 1rem;
-  }
-
-  .class-card__times-details {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .class-card__times {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem 1rem;
-  }
-
-  .class-card__time {
-    color: var(--slate-500);
-    text-wrap: nowrap;
   }
 }
