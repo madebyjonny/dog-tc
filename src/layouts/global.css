@@ -62,11 +62,6 @@ a {
   transition: opacity 0.3s;
 }
 
-a:hover,
-a:focus-visible {
-  color: var(--text);
-}
-
 p {
   font-weight: 300;
 }
@@ -356,4 +351,21 @@ details summary::-webkit-details-marker {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.page-content {
+  max-width: 60%;
+  margin-inline: auto;
+  margin-block: 50px;
+}
+
+.page-content h2,
+.page-content p {
+  margin-bottom: 1rem;
+}
+
+@media (width <= 600px) {
+  .page-content {
+    max-width: 90%;
+  }
 }
