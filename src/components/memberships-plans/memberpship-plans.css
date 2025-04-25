@@ -1,6 +1,7 @@
 .memberships {
   margin-top: 140px;
   display: flex;
+
   padding-inline: 5%;
   flex-direction: column;
   gap: 2rem;
@@ -10,11 +11,12 @@
 }
 
 .memberships__plans {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   max-width: 90%;
   margin-inline: auto;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(361px, 1fr));
 }
 
 .inline-banner {

@@ -1,4 +1,7 @@
 .membership-card {
+  flex: 1;
+  min-width: 310px;
+  max-width: 400px;
   border-radius: var(--border-radius-outer);
   background-color: #000;
   border: 1px solid var(--slate-600);
