@@ -2,32 +2,14 @@
 import "./events.css";
 import ContentCard from "../link-content-card/link-content-card.astro";
 import { format } from 'date-fns'
-
+import events from "./events.json";
 const {showHeading = true} = Astro.props as {
     showHeading: boolean,
 }
 
-type EventType = {
-  title: string;
-  date: string;
-  href: string | null;
-  label: string;
-  time: string;
-  description: string;
-};
 
 
-const events: EventType[] = [
-{
-    title: "Hyrox Team Event",
-    date: "06-22-2025",
-    time: "",
-    href: "#",
-    label: "Coming Soon",
-    description:
-      "Mixed teams of 4 MMFF",
-  },
-];
+
 ---
 
 <article class="events">
