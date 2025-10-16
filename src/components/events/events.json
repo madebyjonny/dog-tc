@@ -1,9 +1,18 @@
 [
   {
-    "title": "Team Hyrox Sim",
+    "title": "Team Hyrox",
     "date": "11-16-2025",
     "time": "09:00-12:00",
-    "label": "Coming soon",
-    "description": "Mixed teams of 4, MMFF"
+    "label": "sign up",
+    "description": "Team Hyrox Sim\n\nMMFF\n\nWaves From 9am until 10:30am",
+    "link": "https://team-aretas.com/competitions/2870"
+  },
+  {
+    "title": "GymSync High Voltage",
+    "date": "11-29-2025",
+    "time": "09:00-12:00",
+    "label": "sign up",
+    "description": "Teams of 4 IGYG",
+    "link": "https://gymsync.team-aretas.com/competitions/2869"
   }
 ]
