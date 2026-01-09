@@ -8,7 +8,6 @@
   {"name":"Team WOD","day":"saturday","times":["09:00-10:00"]},
   {"name":"Team WOD","day":"sunday","times":["09:00-10:00"]},
   {"name":"Comp Class","day":"saturday","times":["10:00-12:00"]},
-  {"name":"Crossfit Beginners Class","day":"sunday","times":["10:00-12:00"]},
   {"name":"Hyrox","day":"monday","times":["06:00-07:00","17:00-18:00","18:00-19:00","19:00-20:00"]},
   {"name":"Hyrox","day":"tuesday","times":["17:30-18:30"]},
   {"name":"Hyrox","day":"wednesday","times":["06:00-07:00","17:00-18:00","18:00-19:00","19:00-20:00"]},
