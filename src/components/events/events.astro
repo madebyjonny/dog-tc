@@ -32,7 +32,7 @@ const {showHeading = true} = Astro.props as {
             <p>{evt.description}</p>
           </div>
           <div class="event-list__cta">
-            <a href={evt.href} class="btn" data-variant="outlined" target="__blank">{evt.label}</a>
+            <a href={evt.link} class="btn" data-variant="outlined" target="__blank">{evt.label}</a>
           </div>
         </li>
       ))
