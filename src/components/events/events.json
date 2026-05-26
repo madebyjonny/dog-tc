@@ -1,38 +1,6 @@
 [
   {
-    "title": "Team Hyrox",
-    "date": "11-16-2025",
-    "time": "09:00",
-    "label": "sign up",
-    "description": "Team Hyrox Sim\n\nMMFF\n\nWaves From 9am until 10:30am",
-    "link": "https://team-aretas.com/competitions/2870"
-  },
-  {
-    "title": "GymSync High Voltage",
-    "date": "11-29-2025",
-    "time": "09:00",
-    "label": "sign up",
-    "description": "Teams of 4 IGYG",
-    "link": "https://gymsync.team-aretas.com/competitions/2869"
-  },
-  {
-    "title": "Hybrid Series 002",
-    "date": "12-04-2026",
-    "time": "09:00",
-    "label": "",
-    "description": "",
-    "link": "https://team-aretas.com/competitions/3219"
-  },
-  {
-    "title": "Hyrox Team Event",
-    "date": "05-25-2026",
-    "time": "09:00",
-    "label": "",
-    "description": "",
-    "link": ""
-  },
-  {
-    "title": "Hybrid Series 003",
+    "title": "Hybrid pairs series",
     "date": "07-05-2026",
     "time": "09:00",
     "label": "",
@@ -40,15 +8,7 @@
     "link": ""
   },
   {
-    "title": "Hybrid Series 004",
-    "date": "09-27-2026",
-    "time": "09:00",
-    "label": "",
-    "description": "",
-    "link": ""
-  },
-  {
-    "title": "Summer Social (in-house)",
+    "title": "Summer social comp",
     "date": "07-18-2026",
     "time": "09:00",
     "label": "",
@@ -56,8 +16,16 @@
     "link": ""
   },
   {
-    "title": "Winter Throwdown (in-house)",
-    "date": "12-05-2026",
+    "title": "In-house Hyrox sim",
+    "date": "08-31-2026",
+    "time": "09:00",
+    "label": "",
+    "description": "",
+    "link": ""
+  },
+  {
+    "title": "Hybrid pairs series",
+    "date": "09-27-2026",
     "time": "09:00",
     "label": "",
     "description": "",
